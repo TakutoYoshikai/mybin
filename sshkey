@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cd $HOME/.ssh
+ssh-keygen -t rsa -f $1 -N ""
+cat $1.pub | pbcopy
+echo "public key is generated and copied."
