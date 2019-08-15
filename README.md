@@ -88,12 +88,16 @@ umount-ssh
 暗号化されたワークスペースを復号化してマウント
 ```
 mount-workspace
+# or
+ws
 ```
 
 ### umount-workspace
 マウントされたworkspaceをアンマウント
 ```
 umount-workspace
+# or
+uws
 ```
 
 ### sshm
