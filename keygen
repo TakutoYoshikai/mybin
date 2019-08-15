@@ -1,6 +1,18 @@
 #!/bin/bash
 
+if [ ! -e $HOME/.ssh ]; then
+	mount-ssh
+fi
+
+if [ "`ls $HOME/.ssh`" = "" ]; then
+	mount-ssh
+fi
+
 cd $HOME/.ssh
 ssh-keygen -t rsa -f $1 -N ""
 cat $1.pub | pbcopy
 echo "public key is generated and copied."
+git add $1.pub $1
+git commit -m "add key"
+git push origin master
+umount-ssh
