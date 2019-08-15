@@ -1,4 +1,4 @@
 #!/bin/bash
 
 encfs -u ~/.ssh
-rm -r .ssh
+rm -r ~/.ssh
