@@ -14,9 +14,11 @@ git clone https://github.com/TakutoYoshikai/mybin $HOME/bin
 echo "export PATH=\$PATH:\$HOME/bin" >> $HOME/.bashrc
 source $HOME/.bashrc
 mkdir $HOME/.Private
+
 # ここに暗号化されたデータが入る
 mkdir $HOME/.Private/.workspace
 mkdir $HOME/.Private/.ssh
+
 # .sshフォルダのgit管理
 mv $HOME/.ssh $HOME/.ssh_tmp
 encfs $HOME/.Private/.ssh $HOME/.ssh
