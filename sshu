@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ ! -e $HOME/.ssh ]; then
+	mount-ssh
+fi
+
+/usr/bin/ssh $@
+
+umount-ssh

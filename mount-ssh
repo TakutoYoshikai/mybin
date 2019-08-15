@@ -1,4 +1,4 @@
 #!/bin/bash
 
-gnome-encfs-manager mount ~/Encfs/.ssh
+encfs $HOME/Encfs/.ssh $HOME/.ssh
 

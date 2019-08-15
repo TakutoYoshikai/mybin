@@ -1,4 +1,4 @@
 #!/bin/bash
 
-gnome-encfs-manager unmount ~/Encfs/.ssh
-
+encfs -u ~/.ssh
+rm -r .ssh
