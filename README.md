@@ -7,6 +7,8 @@ Ubuntu 19.04
 ```
 sudo apt-get install git xsel encfs
 git clone https://github.com/TakutoYoshikai/mybin $HOME/bin
+echo "export PATH=\$PATH:\$HOME/bin" >> $HOME/.bashrc
+source $HOME/.bashrc
 mkdir $HOME/Encfs
 ```
 
