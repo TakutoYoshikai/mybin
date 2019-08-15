@@ -4,6 +4,10 @@ if [ ! -e $HOME/.ssh ]; then
 	mount-ssh
 fi
 
+if [ "`ls $HOME/.ssh`" = "" ]; then
+	mount-ssh
+fi
+
 /usr/bin/git $@
 
 umount-ssh
