@@ -1,4 +1,4 @@
 #!/bin/bash
 
-encfs $HOME/Encfs/.ssh $HOME/.ssh
+encfs $HOME/.Private/.ssh $HOME/.ssh
 

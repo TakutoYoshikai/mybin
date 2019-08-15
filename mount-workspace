@@ -1,5 +1,5 @@
 #!/bin/bash
 
 
-encfs $HOME/Encfs/.Private $HOME/workspace
+encfs $HOME/.Private/.workspace $HOME/workspace
 

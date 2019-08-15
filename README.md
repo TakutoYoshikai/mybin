@@ -13,8 +13,21 @@ sudo apt-get install git xsel encfs
 git clone https://github.com/TakutoYoshikai/mybin $HOME/bin
 echo "export PATH=\$PATH:\$HOME/bin" >> $HOME/.bashrc
 source $HOME/.bashrc
-mkdir $HOME/Encfs
+mkdir $HOME/.Private
+# ここに暗号化されたデータが入る
+mkdir $HOME/.Private/.workspace
+mkdir $HOME/.Private/.ssh
+# .sshフォルダのgit管理
+mv $HOME/.ssh $HOME/.ssh_tmp
+encfs $HOME/.Private/.ssh $HOME/.ssh
+cp $HOME/.ssh_tmp/* $HOME/.ssh
+cd $HOME/.ssh
+git init
+git remote add origin <repository url>
+cd $HOME
+encfs -u $HOME/.ssh
 ```
+
 
 ## 使い方
 ### pbcopy
