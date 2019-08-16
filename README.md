@@ -35,6 +35,8 @@ encfs -u $HOME/.ssh
 
 ## 使い方
 ### pbcopy
+標準入力をクリップボードにコピー
+
 ```
 cat <file> | pbcopy
 echo <keyword> | pbcopy
