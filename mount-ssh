@@ -1,4 +1,0 @@
-#!/bin/bash
-
-encfs $HOME/.Private/.ssh $HOME/.ssh
-
