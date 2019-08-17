@@ -4,7 +4,6 @@ Ubuntuで便利なシェルスクリプト集
 
 ## 前提
 * .sshフォルダをgit管理し、自分用のプライベートリポジトリにバックアップする
-* .sshフォルダを暗号化して運用する
 
 ## OS
 Ubuntu 19.04
@@ -19,17 +18,7 @@ mkdir $HOME/.Private
 
 # ここに暗号化されたデータが入る
 mkdir $HOME/.Private/.workspace
-mkdir $HOME/.Private/.ssh
 
-# .sshフォルダのgit管理
-mv $HOME/.ssh $HOME/.ssh_tmp
-encfs $HOME/.Private/.ssh $HOME/.ssh
-cp $HOME/.ssh_tmp/* $HOME/.ssh
-cd $HOME/.ssh
-git init
-git remote add origin <repository url>
-cd $HOME
-encfs -u $HOME/.ssh
 ```
 
 
@@ -61,7 +50,7 @@ website-clone yoshikai.net
 ```
 
 ### keygen
-暗号化された.sshフォルダを復号化し、公開鍵と秘密鍵のペアを生成し、クリップボードにコピーし、githubのプライベートリポジトリにバックアップし、再度.sshを暗号化する
+公開鍵と秘密鍵のペアを生成し、クリップボードにコピーし、githubのプライベートリポジトリにバックアップする
 ```
 keygen <key name>
 ```
@@ -76,18 +65,6 @@ opendir
 パスの通った実行できるシェルスクリプトを作成
 ```
 mkbin <script name>
-```
-
-### mount-ssh
-暗号化された.sshフォルダを復号化してマウント
-```
-mount-ssh
-```
-
-### umount-ssh
-マウントされた.sshフォルダをアンマウント
-```
-umount-ssh
 ```
 
 ### mount-workspace
@@ -106,32 +83,3 @@ umount-workspace
 uws
 ```
 
-### sshm
-sshコマンドのラップ。.sshフォルダをマウントしてからsshコマンドを実行する
-```
-sshm john@example.com
-```
-
-### sshu
-sshコマンドのラップ。.sshフォルダをマウントしてからsshコマンドを実行する。終了したらアンマウントする
-```
-sshu john@example.com
-```
-
-### gitm
-gitコマンドのラップ。.sshフォルダをマウントしてからgitコマンドを実行する
-```
-gitm push origin master
-```
-
-### gitu
-gitコマンドのラップ。.sshフォルダをマウントしてからgitコマンドを実行する。終了したらアンマウントする
-```
-gitu push origin master
-```
-
-### update-ssh
-.sshをgithubプライベートリポジトリからpullしてくる
-```
-update-ssh
-```
