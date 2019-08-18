@@ -83,3 +83,8 @@ umount-workspace
 uws
 ```
 
+### apt-search
+aptパッケージの検索
+```
+apt-search <keyword>
+```
