@@ -1,0 +1,3 @@
+#!/bin/bash
+
+zip -e -r $1.zip $1
