@@ -88,3 +88,9 @@ aptパッケージの検索
 ```
 apt-search <keyword>
 ```
+
+### prm
+ファイルの完全削除
+```
+prm <file>
+```
