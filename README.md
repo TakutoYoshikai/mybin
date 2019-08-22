@@ -94,3 +94,15 @@ apt-search <keyword>
 ```
 prm <file>
 ```
+
+### enzip
+パスワードつきのzipファイルの作成
+```
+enzip <dir>
+```
+
+### mksh
+シェルスクリプトの作成と実行権限付与
+```
+mksh <file>
+```
