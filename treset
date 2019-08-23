@@ -5,7 +5,6 @@ if [ "$1" = "-p" ]; then
   srm -r go
   srm -r websites
   rm -rf .Private
-  srm -r setup-ubuntu
   srm -r .ssh
   rm -rf .rbenv
   rm -rf .pyenv
@@ -13,6 +12,8 @@ if [ "$1" = "-p" ]; then
   srm .bash_history
   cd ~/setup-ubuntu
   ./apt-remove.sh
+  cd ~
+  srm -r setup-ubuntu
   history -c
   exit
 fi
@@ -22,7 +23,6 @@ if [ "$1" = "-n" ]; then
   rm -rf go
   rm -rf websites
   rm -rf .Private
-  rm -rf setup-ubuntu
   rm -rf .ssh
   rm -rf .rbenv
   rm -rf .pyenv
@@ -30,6 +30,8 @@ if [ "$1" = "-n" ]; then
   rm .bash_history
   cd ~/setup-ubuntu
   ./apt-remove.sh
+  cd ~
+  rm -rf setup-ubuntu
   history -c
   exit
 fi
