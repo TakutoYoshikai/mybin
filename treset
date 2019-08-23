@@ -14,6 +14,7 @@ if [ "$1" = "-p" ]; then
   ./apt-remove.sh
   cd ~
   srm -r setup-ubuntu
+  srm .vimrc
   history -c
   exit
 fi
@@ -32,6 +33,7 @@ if [ "$1" = "-n" ]; then
   ./apt-remove.sh
   cd ~
   rm -rf setup-ubuntu
+  rm .vimrc
   history -c
   exit
 fi
