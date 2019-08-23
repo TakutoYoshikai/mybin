@@ -16,12 +16,16 @@ if [ "$1" = "-p" ]; then
 fi
 
 
-rm -rf go
-rm -rf websites
-rm -rf .Private
-rm -rf setup-ubuntu
-rm -rf .ssh
-rm -rf .rbenv
-rm -rf .pyenv
-rm -rf .nodebrew
-rm .bash_history
+if [ "$1" = "-n" ]; then
+  rm -rf go
+  rm -rf websites
+  rm -rf .Private
+  rm -rf setup-ubuntu
+  rm -rf .ssh
+  rm -rf .rbenv
+  rm -rf .pyenv
+  rm -rf .nodebrew
+  rm .bash_history
+  history -c
+  exit
+fi
