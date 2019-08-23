@@ -4,12 +4,12 @@ cd ~
 if [ "$1" = "-p" ]; then
   srm -r go
   srm -r websites
-  srm -r .Private
+  rm -rf .Private
   srm -r setup-ubuntu
   srm -r .ssh
-  srm -r .rbenv
-  srm -r .pyenv
-  srm -r .nodebrew
+  rm -rf .rbenv
+  rm -rf .pyenv
+  rm -rf .nodebrew
   srm .bash_history
   history -c
   exit
