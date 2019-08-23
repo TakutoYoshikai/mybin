@@ -83,18 +83,6 @@ umount-workspace
 uws
 ```
 
-### apt-search
-aptパッケージの検索
-```
-apt-search <keyword>
-```
-
-### prm
-ファイルの完全削除
-```
-prm <file>
-```
-
 ### enzip
 パスワードつきのzipファイルの作成
 ```
