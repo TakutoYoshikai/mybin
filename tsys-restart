@@ -1,0 +1,4 @@
+#!/bin/bash
+
+tsys-stop
+nohup tsys-client &
