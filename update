@@ -10,3 +10,8 @@ cd ~/setup-ubuntu
 git pull origin master
 
 ./apt.sh
+
+cd ~/go/src/tsys-client
+git pull origin master
+go build
+
