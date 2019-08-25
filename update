@@ -14,4 +14,5 @@ git pull origin master
 cd ~/go/src/tsys-client
 git pull origin master
 go build
+cp tsys-client ~/bin
 
