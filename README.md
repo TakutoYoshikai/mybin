@@ -11,8 +11,9 @@ Ubuntu 19.04
 
 ## インストール
 ```
-sudo apt-get install git xsel encfs
 git clone https://github.com/TakutoYoshikai/mybin $HOME/bin
+cd $HOME/bin
+./mybin-install.sh
 echo "export PATH=\$PATH:\$HOME/bin" >> $HOME/.bashrc
 source $HOME/.bashrc
 mkdir $HOME/.Private
