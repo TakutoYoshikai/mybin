@@ -1,4 +1,0 @@
-#!/bin/bash
-
-tsys-stop
-nohup tsys-client >/dev/null 2>&1 & 

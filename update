@@ -1,18 +1,4 @@
 #!/bin/bash
 
-sudo apt-get update
-sudo apt-get upgrade
-
-cd ~/bin
-git pull origin master
-
-cd ~/setup-ubuntu
-git pull origin master
-
-./apt.sh
-
-cd ~/go/src/tsys-client
-git pull origin master
-go build
-cp tsys-client ~/bin
-
+sudo apt update
+sudo apt upgrade
