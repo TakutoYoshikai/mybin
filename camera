@@ -1,0 +1,3 @@
+#!/bin/bash
+
+fswebcam -i 0 -d v4l2:/dev/video0 -r 640x480 --jpeg 85 ~/.images/`date "+%Y%m%d-%H%M%S"`.jpg
