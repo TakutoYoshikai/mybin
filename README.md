@@ -68,22 +68,6 @@ opendir
 mkbin <script name>
 ```
 
-### mount-workspace
-暗号化されたワークスペースを復号化してマウント
-```
-mount-workspace
-# or
-ws
-```
-
-### umount-workspace
-マウントされたworkspaceをアンマウント
-```
-umount-workspace
-# or
-uws
-```
-
 ### enzip
 パスワードつきのzipファイルの作成
 ```
