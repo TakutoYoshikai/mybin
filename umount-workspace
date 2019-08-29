@@ -1,5 +1,0 @@
-#!/bin/bash
-
-
-encfs -u $HOME/workspace
-rm -r $HOME/workspace
