@@ -1,3 +1,9 @@
 #!/bin/bash
 
-arecord -f S16_LE -r 44100 ~/.voices/`date "+%Y%m%d-%H%M%S"`.wav
+if [ "$1" = "" ]; then
+  arecord -f S16_LE -r 44100 ~/.voices/`date "+%Y%m%d-%H%M%S"`.wav
+  exit
+fi
+
+arecord -d $1 -f S16_LE -r 44100 ~/.voices/`date "+%Y%m%d-%H%M%S"`.wav
+
