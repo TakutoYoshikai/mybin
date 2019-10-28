@@ -1,6 +1,7 @@
 #!/bin/bash
 
 lines=(`cat $1`)
+touch tmp
 for line in "${lines[@]}"
 do
   if [ "`echo $line | grep $2`" = "" ]; then
