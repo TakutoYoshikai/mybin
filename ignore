@@ -1,0 +1,13 @@
+#!/bin/bash
+
+lines=(`cat $1`)
+touch tmp
+for line in "${lines[@]}"
+do
+  if [ "$line" != "$2" ]; then
+    echo $line >> tmp
+  fi
+done
+
+mv tmp $1
+
