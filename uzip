@@ -1,0 +1,26 @@
+#!/bin/bash
+
+if [ "$1" = "tar" -a "$2" = "gz" -a "$3" = "tgz" ]; then
+  tar -xzvf $4
+  exit
+fi
+
+if [ "$1" = "tar" -a "$2" = "bz2" -a "$3" = "tbz" ]; then
+  tar -xjvf $4 
+  exit
+fi
+
+if [ "$1" = "gz" ]; then
+  gzip -d $2
+  exit
+fi
+
+if [ "$1" = "bz2" ]; then
+  bzip2 -d $2
+  exit
+fi
+
+if [ "$1" = "zip" ]; then
+  unzip $2
+  exit
+fi
