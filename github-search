@@ -1,0 +1,6 @@
+#!/bin/bash
+
+keywords="$@"
+
+param=${keywords// /\+}
+firefox "https://github.com/search?q=${param}"
