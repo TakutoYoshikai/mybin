@@ -1,0 +1,7 @@
+#!/bin/bash
+
+
+keywords="$@"
+
+param=${keywords// /\+}
+firefox "https://www.amazon.co.jp/s?k=${param}"
