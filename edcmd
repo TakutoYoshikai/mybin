@@ -1,0 +1,7 @@
+#!/bin/bash
+
+p=`which $1`
+if [ "$p" = "" ]; then
+  exit
+fi
+vim $p
