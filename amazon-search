@@ -4,4 +4,4 @@
 keywords="$@"
 
 param=${keywords// /\+}
-firefox "https://www.amazon.co.jp/s?k=${param}"
+web "https://www.amazon.co.jp/s?k=${param}"

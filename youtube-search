@@ -4,4 +4,4 @@
 keywords="$@"
 
 param=${keywords// /\+}
-firefox "https://www.youtube.com/results?search_query=${param}"
+web "https://www.youtube.com/results?search_query=${param}"

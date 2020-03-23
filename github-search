@@ -3,4 +3,4 @@
 keywords="$@"
 
 param=${keywords// /\+}
-firefox "https://github.com/search?q=${param}"
+web "https://github.com/search?q=${param}"
