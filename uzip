@@ -1,12 +1,17 @@
 #!/bin/bash
 
 if [ "$1" = "tar" -a "$2" = "gz" -a "$3" = "tgz" ]; then
-  tar -xzvf $4
+  tar xzvf $4
+  exit
+fi
+
+if [ "$1" = "tar" -a "$2" = "gz" ]; then
+  tar xzvf $3
   exit
 fi
 
 if [ "$1" = "tar" -a "$2" = "bz2" -a "$3" = "tbz" ]; then
-  tar -xjvf $4 
+  tar xjvf $4 
   exit
 fi
 
