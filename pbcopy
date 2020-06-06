@@ -1,3 +1,4 @@
 #!/bin/bash
 
-xsel --clipboard --input
+#xsel --clipboard --input
+xclip -selection c
