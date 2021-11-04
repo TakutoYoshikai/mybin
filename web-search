@@ -3,4 +3,8 @@
 keywords="$@"
 
 param=${keywords// /\+}
-firefox "https://www.google.com/search?client=ubuntu&channel=fs&q=${param}&ie=utf-8&oe=utf-8"
+if [ "`uname`" = "Darwin" ]; then
+  open "https://www.google.com/search?client=ubuntu&channel=fs&q=${param}&ie=utf-8&oe=utf-8"
+  exit
+fi
+xdg-open "https://www.google.com/search?client=ubuntu&channel=fs&q=${param}&ie=utf-8&oe=utf-8"
